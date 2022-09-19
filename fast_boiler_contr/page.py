@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request, Form ,HTTPException, status
+from fastapi import FastAPI, Request, Form, HTTPException, status
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import FileResponse
 import templates
@@ -24,9 +24,8 @@ def get_user(request: Request, email:str=Form(), password:str=Form()):
     else:
         return HTTPException(status_code= status.HTTP_401_UNAUTHORIZED,detail="Incorrect Username")
 
-
 @app.post('/result')
-def get_user(request: Request, keyword:str=Form(), email:str=Form()):   
+def create_csv(request: Request, keyword:str=Form(), email:str=Form()):   
     # You can do any operation  here and can return the result                  
     df= pandas.DataFrame([[keyword, email]], columns=['user ID', 'search_keyword'])
     df.to_csv('search_data.csv')
