@@ -65,14 +65,9 @@ Now, Let's create a POST request api that will hit when we click the submit butt
 Copy the following code to create the post request.
 For the shake of simplicity our password is stored in the code as a dictionary, the get_user function accept the post request with Form data email and password and if the email and password are matched return another html page as response. One thing to be noted that in login.html line number 11  (where method="post" and action="/loginpage")
 the api endpoint is hit when the submit button of login page is clicked.
-## Simple example for performing operation in backend from frontend data:
-Now, suppose we want to perform some operation in backend from the frontend data and return the result of it. So how will you do that?
-Lets figure it out how!
-See the following code.
 <figure align = "center" width="100%">
 <img src="screenshots\post_loginpage.PNG" width="800"/>
 </figure>
-Here, we have created an api endpoint which accept email and keyword & take those input and save it in csv file,also return it as a response.You can perform any operations like this.
 
 You can copy the following code  for home_old.html
 ```
@@ -131,10 +126,22 @@ You can copy the following code  for home_old.html
 
 </html>
 ```
+
+## Simple example for performing operation in backend from frontend data:
+Now, suppose we want to perform some operation in backend from the frontend data and return the result of it. So how will you do that?
+Lets figure it out how!
+See the following code.
+
+Here, we have created an api endpoint which accept email and keyword & take those input and save it in csv file,also return it as a response.You can perform any operations like this.
+<figure align = "center" width="100%">
+<img src="screenshots\result.PNG" width="800"/>
+</figure>
+
+
 ## Creating an api that downloads files:
 Now, let say we want to download that csv file and see the result, So how do we do that!!
 See the following code snapshot
-<<figure align = "center" width="100%">
+<figure align = "center" width="100%">
 <img src="screenshots\get_excel.PNG" width="800"/>
 </figure>
 Basically, what happens under the hood is when the Download Result button is clicked in home_old.html the get_excel endpoint is hit, the download function is executed and return the file as response.
