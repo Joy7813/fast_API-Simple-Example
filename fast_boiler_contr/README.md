@@ -74,6 +74,63 @@ See the following code.
 </figure>
 Here, we have created an api endpoint which accept email and keyword & take those input and save it in csv file,also return it as a response.You can perform any operations like this.
 
+You can copy the following code  for home_old.html
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+  <title>Simple Example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <meta content='width=device-width, initial-scale=1' name='viewport'>
+  <style>
+    .content {
+      max-width: 500px;
+      margin: auto;
+    }
+    </style>
+    <body>
+</head>
+<body class="content">
+
+<form  id="loginForm"  method="post" action="http://127.0.0.1:8000/result">
+  <div class="form-group row" style="margin-bottom:20px; margin-top:54px; ">
+
+    <div class="col col-sm-6">
+      <label for="exampleFormControlInput1">Search Keyword</label>
+      <input type="text" class="form-control" name="keyword" placeholder="Enter keyword here">
+    </div>
+    <div class="col col-sm-6" style="margin-top:0px;">
+      <label for="exampleFormControlInput1">Account</label>
+      <select name="email" class="form-control" id="cars">
+        <option value="abc@gmail.com">abc@gmail.com</option>
+        <option value="bidut@mail">bidut@mail</option>
+        <option value="xyz@gmail.com">xyz@gmail.com</option>
+        <option value="admin@gmail.com">admin@gmail.com</option>
+      </select>
+
+    </div>
+
+    
+  </div>
+    
+  <br/>
+  <button type="submit" value="Search" class="btn btn-primary">Search</button>
+
+
+</form>
+<br/>
+<br/>
+<button><a href="http://127.0.0.1:8000/get_excel" style="text-decoration: none;">Download Result</a></button>
+
+
+  
+</body>
+
+</html>
+```
 ## Creating an api that downloads files:
 Now, let say we want to download that csv file and see the result, So how do we do that!!
 See the following code snapshot
