@@ -45,18 +45,18 @@ Multipart is used for the requests to combine one or more sets of data into a si
 write the following code given below.
 login api
 <figure align = "center" width="100%">
-<img src="screenshots\login_tr1.PNG" width="600"/>
+<img src="screenshots\login_tr1.PNG" width="800"/>
 </figure>
 
 Here, give the path of your templates directory where all the html files are present. As shown bellow
 <figure align = "center" width="100%">
-<img src="screenshots\templates.PNG" width="600"/>
+<img src="screenshots\templates.PNG" width="400"/>
 </figure>
 
 and run the code to run the server `uvicorn main:app --reload` where main is the filename and app is the FastAPI object name.
 A simple html login.html page is written and stored under the templates folder.
 <figure align = "center" width="100%">
-<img src="screenshots\html_login.PNG" width="600"/>
+<img src="screenshots\html_login.PNG" width="800"/>
 </figure>
 
 In the main.py a GET request api is created where a html templates is returned as a response.
@@ -70,13 +70,13 @@ Now, suppose we want to perform some operation in backend from the frontend data
 Lets figure it out how!
 See the following code.
 <figure align = "center" width="100%">
-<img src="screenshots\post_loginpage.PNG" width="600"/>
+<img src="screenshots\post_loginpage.PNG" width="800"/>
 </figure>
 Here, we have created an api endpoint which accept email and keyword & take those input and save it in csv file,also return it as a response.You can perform any operations like this.
 
 Now, let say we want to download that csv file and see the result, So how do we do that!!
 See the following code snaptshot
 <<figure align = "center" width="100%">
-<img src="screenshots\get_excel.PNG" width="600"/>
+<img src="screenshots\get_excel.PNG" width="800"/>
 </figure>
 Basically, what happends under the hood is when the Download Result button is clicked in home_old.html the get_excel endpoint is hitted, the download function is executed and return the file as response.
